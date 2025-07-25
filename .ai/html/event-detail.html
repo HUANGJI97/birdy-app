@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>活动详情</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    .avatar-overlap {
+      margin-left: -8px;
+    }
+    .avatar-overlap:first-child {
+      margin-left: 0;
+    }
+    .gradient-btn {
+      background: linear-gradient(90deg, #4F46E5 0%, #7C3AED 100%);
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <!-- 顶部导航 -->
+  <nav class="bg-white p-4 shadow-sm">
+    <div class="flex items-center">
+      <button onclick="history.back()" class="text-gray-600">
+        <i class="fas fa-chevron-left text-lg"></i>
+      </button>
+      <h1 class="text-lg font-semibold text-center flex-grow">活动详情</h1>
+    </div>
+  </nav>
+
+  <!-- 活动封面 -->
+  <div class="relative">
+    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+         alt="活动封面" class="w-full h-48 object-cover">
+    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/50 to-transparent p-4">
+      <span class="bg-green-500 text-white text-xs px-2 py-1 rounded-full">进行中</span>
+    </div>
+  </div>
+
+  <!-- 活动内容 -->
+  <div class="bg-white p-4 shadow-sm">
+    <h2 class="text-xl font-bold mb-2">周末户外徒步活动</h2>
+    <div class="flex items-center text-gray-500 text-sm mb-4">
+      <i class="fas fa-map-marker-alt mr-1"></i>
+      <span>北京·香山公园</span>
+    </div>
+    
+    <div class="flex justify-between items-center mb-4">
+      <div>
+        <div class="text-gray-500 text-sm">活动时间</div>
+        <div class="font-medium">7月28日 08:00-17:00</div>
+      </div>
+      <div class="text-right">
+        <div class="text-gray-500 text-sm">费用</div>
+        <div class="font-bold text-purple-600">¥120</div>
+      </div>
+    </div>
+    
+    <div class="border-t border-gray-100 pt-4 mb-4">
+      <h3 class="font-semibold mb-2">活动介绍</h3>
+      <p class="text-gray-600 text-sm leading-relaxed">
+        这是一次适合初学者的徒步活动，我们将从香山公园东门出发，途经香炉峰、鬼见愁等景点，全程约8公里。活动包含专业领队、保险和午餐。请穿着舒适的运动鞋，自备饮用水。
+      </p>
+    </div>
+    
+    <div class="border-t border-gray-100 pt-4">
+      <h3 class="font-semibold mb-2">已报名(12人)</h3>
+      <div class="flex -space-x-2">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-8 h-8 rounded-full border-2 border-white avatar-overlap">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-8 h-8 rounded-full border-2 border-white avatar-overlap">
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" class="w-8 h-8 rounded-full border-2 border-white avatar-overlap">
+        <img src="https://randomuser.me/api/portraits/men/75.jpg" class="w-8 h-8 rounded-full border-2 border-white avatar-overlap">
+        <div class="w-8 h-8 rounded-full border-2 border-white bg-gray-100 text-gray-400 flex items-center justify-center text-xs avatar-overlap">
+          +8
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 底部报名按钮 -->
+  <div class="fixed bottom-0 left-0 right-0 bg-white p-4 shadow-lg">
+    <button class="w-full py-3 rounded-lg gradient-btn text-white font-semibold flex items-center justify-center">
+      <i class="fas fa-user-plus mr-2"></i>
+      立即报名
+    </button>
+  </div>
+
+  <script>
+    // 报名按钮点击事件
+    document.querySelector('button').addEventListener('click', function() {
+      alert('报名成功！我们已收到您的报名信息');
+    });
+  </script>
+</body>
+</html>
+  

@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>门票详情</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+  <div class="container mx-auto px-4 py-8 max-w-md">
+    <header class="mb-6">
+      <h1 class="text-2xl font-bold text-center">门票详情</h1>
+    </header>
+
+    <div class="bg-white rounded-lg shadow overflow-hidden mb-6">
+      <div class="bg-green-500 p-4 text-white">
+        <div class="flex justify-between items-center">
+          <h2 class="text-xl font-bold">VIP门票</h2>
+          <span class="bg-white text-green-500 px-3 py-1 rounded-full text-sm font-semibold">未使用</span>
+        </div>
+        <p class="text-sm opacity-90">2025国际音乐节</p>
+      </div>
+
+      <div class="p-4">
+        <div class="flex items-center mb-4">
+          <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-3">
+            <i class="fas fa-user text-gray-500 text-xl"></i>
+          </div>
+          <div>
+            <p class="font-medium">张伟</p>
+            <p class="text-sm text-gray-500">186****1234</p>
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          <div class="flex justify-between">
+            <span class="text-gray-500">票号</span>
+            <span class="font-medium">T20250724123456</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-gray-500">活动日期</span>
+            <span class="font-medium">2025-08-15</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-gray-500">入场时间</span>
+            <span class="font-medium">18:00-20:00</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-gray-500">座位区域</span>
+            <span class="font-medium">A区12排15座</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex space-x-4">
+      <button onclick="location.href='index.html'" class="flex-1 border border-gray-300 bg-white hover:bg-gray-50 text-gray-700 py-3 px-4 rounded-lg font-medium">
+        返回
+      </button>
+      <button id="verifyBtn" class="flex-1 bg-green-500 hover:bg-green-600 text-white py-3 px-4 rounded-lg font-medium">
+        确认核销
+      </button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('verifyBtn').addEventListener('click', function() {
+      // 模拟核销成功
+      setTimeout(function() {
+        window.location.href = 'verify-success.html';
+      }, 1000);
+    });
+  </script>
+</body>
+</html>
+  
