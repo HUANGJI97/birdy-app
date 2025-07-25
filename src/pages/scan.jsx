@@ -1,14 +1,14 @@
 // @ts-ignore;
-import React, { useState } from 'react';
+import React from 'react';
 // @ts-ignore;
 import { QrCode, ArrowLeft, CheckCircle, History } from 'lucide-react';
 // @ts-ignore;
 import { Button } from '@/components/ui';
 
 export default function ScanPage(props) {
-  const [scanning, setScanning] = useState(true);
-  const [order, setOrder] = useState(null);
-  const [verified, setVerified] = useState(false);
+  const [scanning, setScanning] = React.useState(true);
+  const [order, setOrder] = React.useState(null);
+  const [verified, setVerified] = React.useState(false);
 
   // 模拟扫码成功
   const handleScanSuccess = () => {
