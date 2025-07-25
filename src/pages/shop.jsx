@@ -83,8 +83,8 @@ export default function ShopPage(props) {
       <div className="p-4 flex-1 overflow-y-auto">
         <h1 className="text-2xl font-bold mb-4">BirdyHomebar 点单</h1>
         
-        {/* 分类导航 */}
-        <div className="mb-4 overflow-x-auto">
+        {/* 分类导航 - 隐藏滚动条 */}
+        <div className="mb-4 overflow-x-auto scrollbar-hide">
           <div className="flex space-x-2 pb-2">
             {categories.map(category => <Button key={category.id} variant={activeCategory === category.id ? 'default' : 'outline'} className="whitespace-nowrap rounded-full" onClick={() => setActiveCategory(category.id)}>
                 {category.name}
